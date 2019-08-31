@@ -20,7 +20,7 @@
         )
       %>
       <script>
-      var simplemde = new SimpleMDE({ element: document.getElementById(<%= "#{model_name}_#{field_name}_#{locale}" %>) });
+      var simplemde = new SimpleMDE({ element: document.getElementById(<%= "#{field_name}_#{locale}" %>) });
       </script>
     <% end %>
   </div>
