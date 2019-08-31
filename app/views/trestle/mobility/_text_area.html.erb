@@ -13,21 +13,20 @@
         builder.raw_text_area(
           "#{field_name}_#{locale}",
           options.merge(
-            class: "form-control #{field_name}_#{locale} mobility-field#{locale == selected ? ' ' : ' hidden'}",
+            class: "form-control mobility-field#{locale == selected ? ' tinymce' : ' hidden'}",
             placeholder: "#{label} (#{locale.upcase})",
             data: { locale: locale }
           )
         )
       %>
-      <script>
-        tinyMCE.init({
-          selector: "textarea.<%= #{field_name}_#{locale} %>"
-        });
-      </script>
     <% end %>
   </div>
   
-
+<script type="text/javascript">
+  tinyMCE.init({
+    selector: 'textarea.tinymce'
+  });
+</script>
 
   <%=
     render(
