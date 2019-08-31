@@ -22,7 +22,9 @@ Trestle.init(function(e, root) {
     this.$inputFields.each(function() {
       var field = $(this);
       var active = field.data('locale') !== self.activeLocale;
-      field.toggleClass('hidden', active)
+      var activemce = field.data('locale') == self.activeLocale;
+      field.toggleClass('hidden', active);
+      field.toggleClass('tinymce', activemce)
     })
 
     this.$dropdownItems.each(function() {
