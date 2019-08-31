@@ -96,9 +96,7 @@ Trestle.init(function(e, root) {
       self.activeLocale = $item.data('locale');
       self.chooseLanguage($item.text());
       
-      tinymce.init({
-        selector: 'textarea.tinymce'
-      });
+      tinyMCE.init(Trestle.TinyMCE.default);
     });
 
     this.$element.find('.mobility__deepl-languages .dropdown-item').on('click', function (e) {
