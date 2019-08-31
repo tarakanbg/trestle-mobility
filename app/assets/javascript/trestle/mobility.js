@@ -88,9 +88,15 @@ Trestle.init(function(e, root) {
     var self = this;
 
     this.$element.find('.mobility__languages .dropdown-item').on('click', function () {
+      tinymce.editors = [];
+
       var $item = $(this);
       self.activeLocale = $item.data('locale');
       self.chooseLanguage($item.text());
+      
+      tinymce.init({
+        selector: 'textarea.tinymce'
+      });
     });
 
     this.$element.find('.mobility__deepl-languages .dropdown-item').on('click', function (e) {
