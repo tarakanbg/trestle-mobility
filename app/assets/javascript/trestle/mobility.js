@@ -88,7 +88,7 @@ Trestle.init(function(e, root) {
     var self = this;
 
     this.$element.find('.mobility__languages .dropdown-item').on('click', function () {
-      tinymce.editors = [];
+      tinymce.remove();
 
       var $item = $(this);
       self.activeLocale = $item.data('locale');
