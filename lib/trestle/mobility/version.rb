@@ -1,5 +1,5 @@
 module Trestle
   module Mobility
-    VERSION = "1.2.21"
+    VERSION = "1.2"
   end
 end

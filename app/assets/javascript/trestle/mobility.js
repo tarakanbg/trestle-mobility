@@ -33,9 +33,7 @@ Trestle.init(function(e, root) {
       item.toggleClass('active', active)
     })
 
-    // if (flag) this.$button.text(flag);
-    if (flag) this.$button.innerHTML = flag;
-    console.log('Flag = ' + flag)
+    if (flag) this.$button.text(flag);
     if (this.$deeplTranslationAction) this.presentDeepl();
   }
 
@@ -96,9 +94,7 @@ Trestle.init(function(e, root) {
 
       var $item = $(this);
       self.activeLocale = $item.data('locale');
-      // self.chooseLanguage($item.text());
-      self.chooseLanguage($item.innerHTML);
-      console.log($item.innerHTML)
+      self.chooseLanguage($item.text());
 
       tinyMCE.init(Trestle.TinyMCE.default);
     });
