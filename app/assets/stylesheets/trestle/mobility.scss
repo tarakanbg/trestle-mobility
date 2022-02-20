@@ -51,6 +51,10 @@
   }
 }
 
+.mobility-field.hidden {
+    display: none !important;
+}
+
 .mobility-checkbox {
   margin-right: 0;
   flex: 1;
